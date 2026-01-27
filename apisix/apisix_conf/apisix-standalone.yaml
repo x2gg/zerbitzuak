@@ -1,0 +1,67 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Definición de consumidores (usuarios autorizados)
+consumers:
+  - username: frontend_user
+    plugins:
+      jwt-auth:
+        key: user-key
+        secret: my-secret-key
+
+# Definición de rutas
+routes:
+  # Ruta de login - redirige al backend sin autenticación
+  -
+    id: login-route
+    uri: /api/v1/login
+    upstream:
+      nodes:
+        "backend:4000": 1
+      type: roundrobin
+
+  # Ruta del lemmatizador - protegida con JWT
+  -
+    id: lemma-route
+    uri: /lemma
+    plugins:
+      jwt-auth: {}
+    upstream:
+      nodes:
+        "lemma-service:5000": 1
+      type: roundrobin
+
+  # Ruta del reconocedor de entidades - protegida con JWT
+  -
+    id: nerc-route
+    uri: /nerc
+    plugins:
+      jwt-auth: {}
+    upstream:
+      nodes:
+        "nerc-service:5000": 1
+      type: roundrobin
+
+  # Ruta de ejemplo para testing
+  -
+    id: test-route
+    uri: /get
+    upstream:
+      nodes:
+        "web1:80": 1
+      type: roundrobin
+#END

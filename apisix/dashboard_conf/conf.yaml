@@ -1,0 +1,81 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+conf:
+  
+  listen:
+    host: 0.0.0.0     # `manager api` listening ip or host name
+    port: 9000          # `manager api` listening port
+  etcd:
+    endpoints:          # supports defining multiple etcd host addresses for an etcd cluster
+      #- 127.0.0.1:2379
+      #- 0.0.0.0:2379
+      - etcd:2379
+                        # etcd basic auth info
+    # username: "root"    # ignore etcd username if not enable etcd auth
+    # password: "123456"  # ignore etcd password if not enable etcd auth
+  log:
+    error_log:
+      level: warn       # supports levels, lower to higher: debug, info, warn, error, panic, fatal
+      file_path:
+        logs/error.log  # supports relative path, absolute path, standard output
+                        # such as: logs/error.log, /tmp/logs/error.log, /dev/stdout, /dev/stderr
+authentication:
+  secret:
+    secret              # secret for jwt token generation.
+                        # NOTE: Highly recommended to modify this value to protect `manager api`.
+                        # if it's default value, when `manager api` start, it will generate a random string to replace it.
+  expire_time: 3600     # jwt token expire time, in second
+  users:
+    - username: admin   # username and password for login `manager api`
+      password: DashAld0416    #Rwiq3a7dcXPdR9m7WZJhU
+    - username: user
+      password: user
+#apisix:
+#  admin_api: "http://127.0.0.1:9180/apisix/admin"
+#  admin_key: "edd1c9f034335f136f87ad84b625c8f1"
+plugin_attr:
+  prometheus:
+    export_addr:
+      ip: "0.0.0.0"
+      port: 9091
+#### csp for grafana ui
+  max_cpu: 0             # supports tweaking with the number of OS threads are going to be used for parallelism. Default value: 0 [will use max number of available cpu cores considering hyperthreading (if any)]. If the value is negative, is will not touch the existing parallelism profile.
+
+# security:
+#     #ccess_control_allow_origin: "http://httpbin.org"
+#     access_control_allow_credentials: true          # support using custom cors configration
+#     access_control_allow_headers: "Authorization"
+#     access_control-allow_methods: "*"
+#     x_frame_options: "allow-from *"
+security:
+  access_control_allow_origin: "https://dev.hitz.eus"  # Change this line
+  access_control_allow_credentials: true
+  access_control_allow_headers: "Authorization"
+  access_control_allow_methods: "*"
+  x_frame_options: "allow-from https://dev.hitz.eus"  # Also update this
+    #content_security_policy:  "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src http://158.227.115.100:3000"  # You can set frame-src to provide content for your grafana panel.
+    #content_security_policy: "frame-src *"
+
+   # content_security_policy: "frame-src http://localhost:3000; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+
+server:
+ 
+  content_security_policy: " frame-src http://localhost:3000; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+
+grafana:
+  host: "http://127.0.0.1:3000"  # Grafana URL

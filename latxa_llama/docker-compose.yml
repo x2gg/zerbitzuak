@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  latxa-llama:
+    build: .
+    container_name: latxa-llama
+   
+    volumes:
+      - ./models:/mnt/models:rw
+      - ./api.py:/app/api.py:ro
+    stdin_open: true
+    tty: true
+    networks:
+      - external_net
+      # - temporal_network
+    ports:
+      # BE server port
+    - published: 8111
+      target: 8111
+      host_ip: 0.0.0.0
+
+networks:
+  # internal backend network
+  external_net: 
+    external: true

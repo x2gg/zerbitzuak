@@ -1,0 +1,22 @@
+services:
+  gradio_crud:
+    build:
+      context: .  # Path relative to docker-compose.yml
+      dockerfile: Dockerfile
+    container_name: gradio_crud_ui
+    restart: unless-stopped
+    networks:
+      - backend_net
+      - external_net
+    ports:
+      - "7860:7860"
+    environment:
+      - APISIX_URL=https://zerbitzuak.hitz.eus/api
+      - WEB_BASE_URL=https://zerbitzuak.hitz.eus/erab_kudeaketa/
+      
+networks:
+  # internal network
+  backend_net:
+    external: true
+  external_net:
+    external: true

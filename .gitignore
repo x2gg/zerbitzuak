@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+
+# Docker
+**/data/
+**/volumes/
+
+# ML / HF
+models/
+*.onnx
+*.pt
+*.bin
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+docker-lematizatzailea/
+latxa_llama/
+lemma-nerc/
+lemma-nerc-onnx/
+nlp_infe_cpu/
+proba/
+
+

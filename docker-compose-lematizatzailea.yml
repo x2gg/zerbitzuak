@@ -1,0 +1,47 @@
+#
+# The contents of this file are subject to the license and copyright
+# detailed in the LICENSE and NOTICE files at the root of the source
+# tree and available online at
+#
+# http://www.dspace.org/license/
+#
+
+# Docker Compose for running the DSpace backend for testing/development
+# This is based heavily on the docker-compose.yml that is available in the DSpace/DSpace
+# (Backend) at:
+# https://github.com/DSpace/DSpace/blob/main/docker-compose.yml
+
+services:
+  # DSpace (backend) webapp container
+  lematizatzailea:
+    restart: unless-stopped
+    container_name: lematizatzailea
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--Xmx4g}
+      TZ: ${TIMEZONE:-Europe/Madrid}
+    #image: joanes1/django-lem
+    image:   joanes1/lematizatzailea_eta_nerc:latest
+    #image: joanes1/lemma_nerc_berria:latest
+    #image: joanes1/lematizatzailea_gunicorn
+
+
+    networks:
+      - external_net
+         #ipv4_address: 172.23.0.43
+    ports:
+      # BE server port
+    - published: 8010
+      target: 8010
+      host_ip: 0.0.0.0
+      # original debug port
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./docker-lematizatzailea/static:/app/static
+      - ./docker-lematizatzailea/media:/app/media
+    # joanes1/lematizatzailea                                      "python app.py"          6 weeks ago   Up 2 weeks             0.0.0.0:7860->7860/tcp, :::7860->7860/tcp                                                                  lematizatzailea
+
+
+networks:
+   external_net:
+    external: true

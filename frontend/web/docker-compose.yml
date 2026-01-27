@@ -1,0 +1,32 @@
+# version: "3.9"
+services:
+  web:
+    container_name: gradio_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7861:7860"
+    environment:
+      GRADIO_SERVER_NAME: 0.0.0.0
+      # - APISIX_URL=http://172.17.0.1:9080
+      APISIX_URL: https://zerbitzuak.hitz.eus/api
+      WEB_BASE_URL: https://zerbitzuak.hitz.eus/nlp_tresnak/
+      WEB_LANG: en
+      FEDERATION_URL: https://zerbitzuak.hitz.eus/Shibboleth.sso/Login?target=https://zerbitzuak.hitz.eus/zerb_sso
+      USERNAME_MIN_LENGTH: 3
+      USERNAME_MAX_LENGTH: 64
+      PASSWORD_MIN_LENGTH: 8
+      PASSWORD_MAX_LENGTH: 64
+      GUEST_NLP_TIMEOUT: 10
+      NLP_TIMEOUT: 30 
+    volumes:
+      # - .:/usr/src/app  # Uncomment for development live-reload
+      - ./httpx_config.py:/usr/local/lib/python3.10/site-packages/httpx/_config.py
+    restart: unless-stopped
+    networks:
+      - external_net
+
+networks:
+  external_net:
+    external: true

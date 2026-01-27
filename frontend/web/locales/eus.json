@@ -1,0 +1,218 @@
+{
+	"header": {
+		"title": "NLP Tresnak - Euskal Hizkuntzaren Prozesamendua",
+		"login_button": "👤 Saioa hasi",
+		"federated_login_button": "Federatutako saio hasiera",
+		"profile_button": "Profila",
+		"logout_button": "Saioa itxi",
+		"language_selector": "Hizkuntza",
+		"user_label": "Erabiltzailea"
+	},
+	"authentication": {
+		"login_modal_title": "### Erabiltzailearen saio hasiera",
+		"register_modal_title": "### Kontua sortu",
+		"username_label": "Erabiltzaile-izena",
+		"username_placeholder": "Erabiltzaile-izena sartu",
+		"email_label": "Helbide elektronikoa",
+		"email_placeholder": "Helbide elektronikoa sartu",
+		"password_label": "Pasahitza",
+		"password_confirm_label": "Pasahitza berretsi",
+		"login_button": "Saioa hasi",
+		"register_button": "Erregistratu",
+		"cancel_button": "Utzi",
+		"switch_to_register": "Ez duzu konturik? Klikatu hemen erregistratzeko",
+		"switch_to_login": "Badaukazu kontua? Klikatu hemen saioa hasteko",
+		"forgot_password": "Pasahitza ahaztu duzu? Klikatu hemen"
+	},
+	"email_verification": {
+		"modal_title": "### Zure helbide elektronikoa egiaztatu",
+		"code_label": "Egiaztapen kodea",
+		"code_placeholder": "Egiaztapen kodea sartu",
+		"resend_button": "Beste egiaztapen kode bat eskatu",
+		"verify_button": "Egiaztatu",
+		"close_button": "Itxi"
+	},
+	"profile": {
+		"modal_title": "### 👤 Erabiltzailearen profila",
+		"resend_verification_button": "Helbide elektronikoko egiaztapen kodea eskatu",
+		"generate_key_button": "API gako berria sortu",
+		"logout_button": "Saioa itxi",
+		"close_button": "Itxi",
+		"okay_button": "Ados"
+	},
+	"password_reset": {
+		"modal_title": "### Zure pasahitza berrezarri",
+		"code_label": "Egiaztapen kodea",
+		"code_placeholder": "Egiaztapen kodea sartu",
+		"email_label": "Helbide elektronikoa",
+		"email_placeholder": "Helbide elektronikoa sartu",
+		"password_label": "Pasahitza",
+		"password_confirm_label": "Pasahitza berretsi",
+		"resend_button": "Beste pasahitz berrezartze kode bat eskatu",
+		"verify_button": "Egiaztatu",
+		"close_button": "Itxi",
+		"request_modal_title": "### Pasahitza ahaztu duzu?",
+		"request_send_button": "Pasahitza berrezartzeko esteka bidali",
+		"note_for_federated": "Oharra: Federatutako erabiltzaileek ez dute pasahitza berreskuratzeko aukera hau eskuragarri."
+	},
+	"tabs": {
+		"lemmatizer": "Lematizatzailea",
+		"nerc": "Entitate Izendunaren Ezagutza"
+	},
+	"nlp": {
+		"input_type_label": "Sarrera mota",
+		"text_input_option": "Testu sarrera",
+		"file_upload_option": "Fitxategi karga",
+		"text_input_label": "Sarrera testua",
+		"text_input_placeholder": "Aztertzeko euskal testua sartu...",
+		"file_upload_label": "Testu fitxategia kargatu",
+		"analyze_button": "Aztertu",
+		"analyze_text_button": "Testua aztertu",
+		"analyze_file_button": "Fitxategia aztertu",
+		"results_label": "Emaitzak: ...",
+		"output_format_label": "Irteera formatua",
+		"output_format_web": "Web ikuspegia",
+		"output_format_txt": "Testu fitxategia (.txt)",
+		"output_format_json": "JSON fitxategia (.json)",
+		"download_button": "Deskargatu"
+	},
+	"lemmatizer": {
+		"title": "## 🔍 Lematizatzailea",
+		"description": "Euskal hitzak oinarri-formara (lemara) bihurtzen ditu"
+	},
+	"nerc": {
+		"title": "## 🔗 Entitate Izendunaren Ezagutza",
+		"description": "Euskal testuko entitate izendatuak identifikatu eta sailkatu"
+	},
+	"messages": {
+		"success": {
+			"welcome": "✅ Ongi etorri!",
+			"registration_success": "✅ Erregistroa arrakastatsua! Mesedez, egiaztatu zure helbide elektronikoa.",
+			"verification_sent": "✅ Egiaztapen kodea arrakastaz bidali da.",
+			"email_verified": "✅ Helbide elektronikoa arrakastaz egiaztatu da!",
+			"password_reset_sent": "✅ Kontsultatu zure posta elektronikoa pasahitza berrezartzeko. Ikusten ez baduzu, begiratu spam karpeta.",
+			"password_reset": "✅ Zure pasahitza arrakastaz berrezarri da.",
+			"new_api_key": "### 🔑 Zure API gako berria",
+			"api_key_instructions": "⚠️ Garrantzitsua: Kopiatu giltza-gakoa orain — ezin izango duzu berriro ikusi!",
+			"user_updated": "✅ Erabiltzailea arrakastaz eguneratu da!",
+			"user_created": "✅ Erabiltzailea arrakastaz sortu da!",
+			"user_deleted": "✅ Erabiltzailea arrakastaz ezabatu da!",
+			"profile_updated": "✅ Profila arrakastaz eguneratu da!",
+			"profile_created": "✅ Profila arrakastaz sortu da!",
+			"profile_deleted": "✅ Profila arrakastaz ezabatu da!"
+		},
+		"errors": {
+			"fill_all_fields": "❌ Mesedez, bete beharrezko eremu guztiak",
+			"passwords_not_match": "❌ Pasahitzak ez datoz bat",
+			"password_not_secure_100000": "❌ Pasahitz hau oso ohikoa da eta ez ditu gure segurtasun estandarrak betetzen. Mesedez, aukeratu pasahitz seguruago bat.",
+			"password_not_secure_1000": "❌ Pasahitz hau oso arrunta da eta ez ditu gure segurtasun estandarrak betetzen. Zure segurtasunerako, aukeratu beste bat.",
+			"password_not_secure": "❌ Pasahitz honek ez ditu gure segurtasun estandarrak betetzen. Mesedez, saiatu konbinazio bereziago bat.",
+			"password_too_short": "❌ Pasahitzak gutxienez 8 karaktereko luzera behar ditu",
+			"password_too_long": "❌ Pasahitzak ezin du 64 karaktere baino luzeagoa izan",
+			"username_too_short": "❌ Erabiltzaile-izenak gutxienez 3 karaktereko luzera behar ditu",
+			"username_too_long": "❌ Erabiltzaile-izenak ezin du 64 karaktere baino luzeagoa izan",
+			"username_or_email_taken": "❌ Erabiltzaile-izena edo helbide elektronikoa jadanik erabilpenpean dago",
+			"registration_error": "❌ Erregistro errorea",
+			"registration_failed": "❌ Erregistroak huts egin du",
+			"too_many_attempts": "❌ Saiakera gehiegi. Itxaron minutu batzuk berriro saiatu aurretik.",
+			"invalid_credentials": "❌ Erabiltzaile-izen edo pasahitz okerra",
+			"enter_credentials": "❌ Mesedez, sartu erabiltzaile-izena eta pasahitza",
+			"email_required": "❌ Mesedez, eman zure helbide elektronikoa",
+			"account_disabled": "❌ Zure kontua desgaituta dago. Laguntza eskatzeko jarri harremanetan laguntza zerbitzuarekin.",
+			"not_authenticated": "❌ Autentifikatu gabe",
+			"invalid_input": "❌ Sarrera baliogabekoa edo luzeegia da",
+			"authentication_required": "❌ Ekintza hau egiteko saioa hasi behar duzu",
+			"verification_failed": "❌ Kodea okerra da edo iraungita dago",
+			"verification_not_sent": "❌ Egiaztapen kodea ezin izan da bidali",
+			"file_not_found": "❌ Errorea: Kargatutako fitxategia ez da aurkitu.",
+			"api_call_failed": "❌ Ezin izan da eragiketa burutu. Honek sare arazo bat, zerbitzariaren denbora-muga edo fitxategi motaren eta tamainaren mugak direla eta gerta daiteke. Mesedez, egiaztatu zure konexioa eta saiatu berriro. Arazoak jarraitzen baditu, saiatu fitxategi txikiago batekin.",
+			"api_error": "❌ Errorea",
+			"user_not_found": "❌ Erabiltzailea ez da aurkitu",
+			"profile_not_found": "❌ Profila ez da aurkitu",
+			"update_failed": "❌ Eguneraketak huts egin du",
+			"delete_failed": "❌ Ezabaketak huts egin du",
+			"create_failed": "❌ Sorketak huts egin du",
+			"password_reset_failed": "❌ Pasahitza berrezartzeak huts egin du",
+			"api_key_generation_failed": "❌ Ezin izan da API gakoa sortu"
+		},
+		"warnings": {
+			"enter_text_or_file": "⚠️ Mesedez, sartu testua edo kargatu fitxategia.",
+			"txt_files_only": "⚠️ .txt fitxategiak soilik onartzen dira.",
+			"invalid_input": "⚠️ Sarrera baliogabekoa edo luzeegia da. Saioa hasi edo kontua sortu muga handiagoak erabil ahal izateko.",
+			"authentication_required": "⚠️ Autentifikazioa beharrezkoa. Mesedez, hasi saioa zerbitzu honetara sartzeko.",
+			"file_too_large": "⚠️ Fitxategia handiegia da. Mesedez, kargatu txikiagoa den fitxategia.",
+			"unsupported_file_type": "⚠️ Onartzen ez den fitxategi mota. Mesedez, kargatu .txt fitxategia.",
+			"rate_limit_guest": "⚠️ Tasa-muga gainditu da. Mesedez, hasi saioa muga altuagoak erabil ahal izateko.",
+			"rate_limit_user": "⚠️ Tasa-muga gainditu da. Mesedez, saiatu berriro geroago.",
+			"request_timeout": "⚠️ Eskaera amaitu da. Mesedez, saiatu berriro geroago edo sarrera laburragoa erabili."
+		},
+		"formatting": {
+			"invalid_response": "❌ Erantzun formatu baliogabea",
+			"no_api_key": "ℹ️ Oraindik ez duzu API gakorik sortu",
+			"email_not_verified": "(EGIAZTATU GABE)",
+			"yes": "Bai",
+			"no": "Ez"
+		}
+	},
+	"profile_info": {
+		"username_label": "**Erabiltzaile-izena:**",
+		"email_label": "**Helbide elektronikoa:**",
+		"api_key_label": "**API gakoa:**"
+	},
+	"admin": {
+		"login": {
+			"title": "Administrari saio-hasiera",
+			"username_label": "Erabiltzaile-izena",
+			"password_label": "Pasahitza",
+			"login_button": "Saioa hasi",
+			"logout_button": "Saioa itxi"
+		},
+		"user_management": {
+			"title": "Erabiltzaileen kudeaketa",
+			"search_placeholder": "Helbide elektronikoz bilatu...",
+			"user_type_label": "Erabiltzaile mota",
+			"status_label": "Egoera",
+			"status_all": "Denak",
+			"status_active": "Aktiboak",
+			"status_pending": "Zain",
+			"status_disabled": "Desgaituta",
+			"add_user_button": "Erabiltzaile berria gehitu",
+			"edit_user_button": "Editatu",
+			"delete_user_button": "Ezabatu",
+			"save_changes_button": "Aldaketak gorde",
+			"cancel_button": "Utzi",
+			"refresh_button": "Freskatu",
+			"confirm_delete_title": "Ezabaketa berretsi",
+			"confirm_delete_message": "Ziur zaude erabiltzaile hau ezabatu nahi duzula? Ekintza hau ezin da desegin.",
+			"confirm_button": "Berretsi",
+			"federated_user_label": "Federatutako erabiltzailea",
+			"no_users_found": "Ez da erabiltzailerik aurkitu"
+		},
+		"profile_management": {
+			"title": "Profilen kudeaketa",
+			"add_profile_button": "Profil berria gehitu",
+			"edit_profile_button": "Profila editatu",
+			"save_profile_button": "Profila gorde",
+			"delete_profile_button": "Profila ezabatu",
+			"profile_id": "IDa",
+			"profile_name": "Izena",
+			"count": "Kopurua",
+			"time_window": "Denbora leihoa (segundoak)",
+			"rejected_code": "Baztertutako kodea",
+			"rejected_message": "Baztertutako mezua",
+			"policy": "Politika",
+			"show_limit_header": "Muga goiburua erakutsi",
+			"policy_choices": {
+				"local": "Lokala",
+				"redis": "Redis",
+				"cluster": "Cluster"
+			},
+			"confirm_delete_message": "Ziur zaude profil hau ezabatu nahi duzula? Ekintza hau ezin da desegin.",
+			"no_profiles_found": "Ez da profilik aurkitu"
+		},
+		"navigation": {
+			"users": "Erabiltzaileak",
+			"profiles": "Profilak"
+		}
+	}
+}

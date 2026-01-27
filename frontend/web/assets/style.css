@@ -1,0 +1,65 @@
+/* Fuentes formales para la aplicación web */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+/* Fuente principal para el cuerpo del texto */
+body, .gradio-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Fuente para encabezados y títulos */
+h1, h2, h3, h4, h5, h6,
+.gradio-container .title,
+.gradio-container .header h1,
+.gradio-container .modal-title {
+    font-family: 'Merriweather', 'Georgia', serif !important;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+/* Fuente para botones y elementos interactivos */
+.gradio-container button,
+.gradio-container .btn {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500;
+}
+
+/* Fuente para inputs y formularios */
+.gradio-container input,
+.gradio-container textarea,
+.gradio-container select,
+.gradio-container .form-input {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Fuente específica para elementos markdown */
+.gradio-container .markdown,
+.gradio-container .prose {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Tamaño base de fuente ligeramente mayor para mejor legibilidad */
+.gradio-container {
+    font-size: 16px !important;
+}
+
+/* Mejoras adicionales para legibilidad */
+.gradio-container .block {
+    font-size: 14px;
+}
+
+.gradio-container .small {
+    font-size: 13px;
+}
+
+/* Estilos específicos para elementos de la interfaz */
+.gradio-container .tab-nav {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500;
+}
+
+.gradio-container .dropdown {
+    font-family: 'Inter', sans-serif !important;
+}

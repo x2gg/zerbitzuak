@@ -1,0 +1,77 @@
+# version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: db_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: user_db
+      MYSQL_USER: api_user
+      MYSQL_PASSWORD: securepassword
+    networks:
+      - backend_net
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: db_api
+    restart: unless-stopped
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: api_user
+      DB_PASSWORD: securepassword
+      DB_NAME: user_db
+      SMTP_HOST: smtp.ehu.eus
+      SMTP_PORT: 587
+      SMTP_USERNAME: clariaheus.hitz@ehu.eus
+      SMTP_PASSWORD: FTfgit70
+      SMTP_FROM_EMAIL: clariaheus.hitz@ehu.eus
+      SMTP_FROM_NAME: Hitz - NLP
+      APISIX_ADMIN_URL: http://apisix:9180/apisix/admin
+      # APISIX_ADMIN_URL: https://zerbitzuak.hitz.eus/apisix/admin/
+      APISIX_ADMIN_KEY: edd1c9f034335f136f87ad84b625c8f1
+      #NLP_URL: http://lemma_eta_nerc:8010/api
+      #NLP_URL: http://lematizatzailea:8010/api/
+      NLP_URL: https://zerbitzuak.hitz.eus/lema/api
+
+     # NLP_URL: http://fastapi-nlp:8300
+      WEB_BASE_URL: https://zerbitzuak.hitz.eus/nlp_tresnak/
+      CRUD_ADMIN: admin
+      PYTHONPATH: /app
+    networks:
+      - backend_net
+      - external_net
+    ports:
+      - "4100:4100"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./app:/app/app  # Mount app directory for development (optional)
+      - ./migrations:/app/migrations  # Mount migrations
+      - ./scripts:/app/scripts  # Mount scripts
+
+volumes:
+  mysql_data:
+
+networks:
+  external_net:
+    external: true
+  # internal network
+  backend_net:
+    external: true

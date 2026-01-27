@@ -1,0 +1,218 @@
+{
+	"header": {
+		"title": "Herramientas PLN - Procesamiento del Euskara",
+		"login_button": "👤 Iniciar sesión",
+		"federated_login_button": "Inicio de sesión federado",
+		"profile_button": "Perfil",
+		"logout_button": "Cerrar sesión",
+		"language_selector": "Idioma",
+		"user_label": "Usuario"
+	},
+	"authentication": {
+		"login_modal_title": "### Inicio de sesión",
+		"register_modal_title": "### Crear cuenta",
+		"username_label": "Nombre de usuario",
+		"username_placeholder": "Introduce tu nombre de usuario",
+		"email_label": "Correo electrónico",
+		"email_placeholder": "Introduce tu correo electrónico",
+		"password_label": "Contraseña",
+		"password_confirm_label": "Confirmar contraseña",
+		"login_button": "Iniciar sesión",
+		"register_button": "Registrarse",
+		"cancel_button": "Cancelar",
+		"switch_to_register": "¿No tienes una cuenta? Haz clic aquí para registrarte",
+		"switch_to_login": "¿Ya tienes una cuenta? Haz clic aquí para iniciar sesión",
+		"forgot_password": "Has olvidado tu contraseña? Haz clic aquí"
+	},
+	"email_verification": {
+		"modal_title": "### Verifica tu correo electrónico",
+		"code_label": "Código de verificación",
+		"code_placeholder": "Introduce el código de verificación",
+		"resend_button": "Solicitar otro código de verificación",
+		"verify_button": "Verificar",
+		"close_button": "Cerrar"
+	},
+	"profile": {
+		"modal_title": "### 👤 Perfil de usuario",
+		"resend_verification_button": "Solicitar código de verificación",
+		"generate_key_button": "Generar nueva clave API",
+		"logout_button": "Cerrar sesión",
+		"close_button": "Cerrar",
+		"okay_button": "Aceptar"
+	},
+	"password_reset": {
+		"modal_title": "### Restablecer contraseña",
+		"code_label": "Código de verificación",
+		"code_placeholder": "Introduce el código de verificación",
+		"email_label": "Correo electrónico",
+		"email_placeholder": "Introduce tu correo electrónico",
+		"password_label": "Nueva contraseña",
+		"password_confirm_label": "Confirmar nueva contraseña",
+		"resend_button": "Solicitar otro código de restablecimiento",
+		"verify_button": "Verificar",
+		"close_button": "Cerrar",
+		"request_modal_title": "### ¿Olvidaste tu contraseña?",
+		"request_send_button": "Enviar enlace para restablecer contraseña",
+		"note_for_federated": "Nota: la recuperación de contraseña no está disponible para usuarios federados"
+	},
+	"tabs": {
+		"lemmatizer": "Lematizador",
+		"nerc": "Reconocimiento de Entidades Nombradas"
+	},
+	"nlp": {
+		"input_type_label": "Tipo de entrada",
+		"text_input_option": "Texto",
+		"file_upload_option": "Subir archivo",
+		"text_input_label": "Texto de entrada",
+		"text_input_placeholder": "Introduce texto en euskera para analizar...",
+		"file_upload_label": "Subir archivo de texto",
+		"analyze_button": "Analizar",
+		"analyze_text_button": "Analizar texto",
+		"analyze_file_button": "Analizar archivo",
+		"results_label": "Resultados: ...",
+		"output_format_label": "Formato de salida",
+		"output_format_web": "Vista web",
+		"output_format_txt": "Archivo de texto (.txt)",
+		"output_format_json": "Archivo JSON (.json)",
+		"download_button": "Descargar"
+	},
+	"lemmatizer": {
+		"title": "## 🔍 Lematizador",
+		"description": "Convierte palabras en euskera a su forma base (lema)"
+	},
+	"nerc": {
+		"title": "## 🔗 Reconocimiento de Entidades Nombradas",
+		"description": "Identifica y clasifica entidades nombradas en texto en euskera"
+	},
+	"messages": {
+		"success": {
+			"welcome": "✅ ¡Bienvenido/a!",
+			"registration_success": "✅ ¡Registro exitoso! Por favor verifica tu correo electrónico.",
+			"verification_sent": "✅ Código de verificación enviado correctamente.",
+			"email_verified": "✅ ¡Correo electrónico verificado con éxito!",
+			"password_reset_sent": "✅ Revisa tu correo electrónico para ver las instrucciones de restablecimiento de contraseña. Si no lo ves, revisa la carpeta de spam.",
+			"password_reset": "✅ Tu contraseña se ha restablecido correctamente.",
+			"new_api_key": "### 🔑 Tu nueva clave API",
+			"api_key_instructions": "⚠️ Importante: Copia esta clave ahora — ¡no podrás verla de nuevo!",
+			"user_updated": "✅ Usuario actualizado correctamente",
+			"user_created": "✅ Usuario creado correctamente",
+			"user_deleted": "✅ Usuario eliminado correctamente",
+			"profile_updated": "✅ Perfil actualizado correctamente",
+			"profile_created": "✅ Perfil creado correctamente",
+			"profile_deleted": "✅ Perfil eliminado correctamente"
+		},
+		"errors": {
+			"fill_all_fields": "❌ Por favor completa todos los campos requeridos",
+			"passwords_not_match": "❌ Las contraseñas no coinciden",
+			"password_not_secure_100000": "❌ Esta contraseña es extremadamente común y no cumple con nuestros estándares de seguridad. Por favor, elige una contraseña más segura.",
+			"password_not_secure_1000": "❌ Esta contraseña es muy predecible y no cumple con nuestros estándares de seguridad. Por tu seguridad, elige una diferente.",
+			"password_not_secure": "❌ Esta contraseña no cumple con nuestros estándares de seguridad. Por favor, prueba una combinación más única.",
+			"password_too_short": "❌ La contraseña debe tener al menos 8 caracteres",
+			"password_too_long": "❌ La contraseña no puede tener más de 64 caracteres",
+			"username_too_short": "❌ El nombre de usuario debe tener al menos 3 caracteres",
+			"username_too_long": "❌ El nombre de usuario no puede tener más de 64 caracteres",
+			"username_or_email_taken": "❌ El nombre de usuario o correo electrónico ya está en uso",
+			"registration_error": "❌ Error en el registro",
+			"registration_failed": "❌ Fallo en el registro",
+			"too_many_attempts": "❌ Demasiados intentos. Por favor, espera unos minutos antes de intentarlo de nuevo.",
+			"invalid_credentials": "❌ Usuario o contraseña incorrectos",
+			"enter_credentials": "❌ Por favor introduce usuario y contraseña",
+			"email_required": "❌ Por favor proporciona tu correo electrónico",
+			"account_disabled": "❌ Tu cuenta está deshabilitada. Por favor contacta con soporte.",
+			"not_authenticated": "❌ No autenticado",
+			"invalid_input": "❌ Entrada inválida o demasiado larga",
+			"authentication_required": "❌ Debes iniciar sesión para realizar esta acción",
+			"verification_failed": "❌ Código inválido o expirado",
+			"verification_not_sent": "❌ No se pudo enviar el código de verificación",
+			"file_not_found": "❌ Error: No se encontró el archivo subido.",
+			"api_call_failed": "❌ No se ha podido completar la operación. Esto puede deberse a un problema de red, un tiempo de espera del servidor o limitaciones de tamaño y tipo de archivo. Por favor, verifica tu conexión e inténtalo de nuevo. Si el problema persiste, prueba con un archivo más pequeño.",
+			"api_error": "❌ Error",
+			"user_not_found": "❌ Usuario no encontrado",
+			"profile_not_found": "❌ Perfil no encontrado",
+			"update_failed": "❌ Error al actualizar",
+			"delete_failed": "❌ Error al eliminar",
+			"create_failed": "❌ Error al crear",
+			"password_reset_failed": "❌ Error al restablecer la contraseña",
+			"api_key_generation_failed": "❌ No se pudo generar la clave API"
+		},
+		"warnings": {
+			"enter_text_or_file": "⚠️ Por favor introduce algún texto o sube un archivo.",
+			"txt_files_only": "⚠️ Solo se admiten archivos .txt.",
+			"invalid_input": "⚠️ Entrada inválida o demasiado larga. Inicia sesión o crea una cuenta para obtener límites más altos.",
+			"authentication_required": "⚠️ Autenticación requerida. Por favor inicia sesión para acceder a este servicio.",
+			"file_too_large": "⚠️ El archivo es demasiado grande. Por favor sube un archivo más pequeño.",
+			"unsupported_file_type": "⚠️ Tipo de archivo no soportado. Por favor sube un archivo .txt.",
+			"rate_limit_guest": "⚠️ Límite de tasa excedido. Inicia sesión para obtener límites más altos.",
+			"rate_limit_user": "⚠️ Límite de tasa excedido. Por favor inténtalo de nuevo más tarde.",
+			"request_timeout": "⚠️ Petición expirada. Por favor inténtalo de nuevo más tarde o usa un contenido más corto."
+		},
+		"formatting": {
+			"invalid_response": "❌ Formato de respuesta inválido",
+			"no_api_key": "ℹ️ Aún no has creado ninguna clave API",
+			"email_not_verified": "(NO VERIFICADO)",
+			"yes": "Sí",
+			"no": "No"
+		}
+	},
+	"profile_info": {
+		"username_label": "**Usuario:**",
+		"email_label": "**Correo electrónico:**",
+		"api_key_label": "**Clave API:**"
+	},
+	"admin": {
+		"login": {
+			"title": "Inicio de sesión de administrador",
+			"username_label": "Usuario",
+			"password_label": "Contraseña",
+			"login_button": "Iniciar sesión",
+			"logout_button": "Cerrar sesión"
+		},
+		"user_management": {
+			"title": "Gestión de usuarios",
+			"search_placeholder": "Buscar por correo electrónico...",
+			"user_type_label": "Tipo de usuario",
+			"status_label": "Estado",
+			"status_all": "Todos",
+			"status_active": "Activo",
+			"status_pending": "Pendiente",
+			"status_disabled": "Deshabilitado",
+			"add_user_button": "Añadir nuevo usuario",
+			"edit_user_button": "Editar",
+			"delete_user_button": "Eliminar",
+			"save_changes_button": "Guardar cambios",
+			"cancel_button": "Cancelar",
+			"refresh_button": "Actualizar",
+			"confirm_delete_title": "Confirmar eliminación",
+			"confirm_delete_message": "¿Estás seguro de que deseas eliminar este usuario? Esta acción no se puede deshacer.",
+			"confirm_button": "Confirmar",
+			"federated_user_label": "Usuario federado",
+			"no_users_found": "No se encontraron usuarios"
+		},
+		"profile_management": {
+			"title": "Gestión de perfiles",
+			"add_profile_button": "Añadir nuevo perfil",
+			"edit_profile_button": "Editar perfil",
+			"save_profile_button": "Guardar perfil",
+			"delete_profile_button": "Eliminar perfil",
+			"profile_id": "ID",
+			"profile_name": "Nombre",
+			"count": "Contador",
+			"time_window": "Ventana de tiempo (segundos)",
+			"rejected_code": "Código de rechazo",
+			"rejected_message": "Mensaje de rechazo",
+			"policy": "Política",
+			"show_limit_header": "Mostrar encabezado de límite",
+			"policy_choices": {
+				"local": "Local",
+				"redis": "Redis",
+				"cluster": "Clúster"
+			},
+			"confirm_delete_message": "¿Estás seguro de que deseas eliminar este perfil? Esta acción no se puede deshacer.",
+			"no_profiles_found": "No se encontraron perfiles"
+		},
+		"navigation": {
+			"users": "Usuarios",
+			"profiles": "Perfiles"
+		}
+	}
+}

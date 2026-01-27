@@ -1,0 +1,87 @@
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+.env.*.local
+.venv
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Docker
+docker-compose.yml
+docker-compose.*.yml
+Dockerfile
+Dockerfile.*
+
+# Documentation
+README.md
+README_*.md
+*.md
+docs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+mysql_data/
+gradio_crud/
+create_structure.sh
+VERIFICATION_CHECKLIST.md
+FUNCTION_MAPPING.md
+
+# Old files
+main.py
+login_probak.py
+
+# Keep only what's needed
+!requirements.txt
+!app/
+!migrations/

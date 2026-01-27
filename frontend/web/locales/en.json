@@ -1,0 +1,218 @@
+{
+	"header": {
+		"title": "NLP Tools - Basque Language Processing",
+		"login_button": "👤 Login",
+		"federated_login_button": "Federated login",
+		"profile_button": "Profile",
+		"logout_button": "Logout",
+		"language_selector": "Language",
+		"user_label": "User"
+	},
+	"authentication": {
+		"login_modal_title": "### User Login",
+		"register_modal_title": "### Create Account",
+		"username_label": "Username",
+		"username_placeholder": "Enter username",
+		"email_label": "Email",
+		"email_placeholder": "Enter email",
+		"password_label": "Password",
+		"password_confirm_label": "Confirm Password",
+		"login_button": "Login",
+		"register_button": "Register",
+		"cancel_button": "Cancel",
+		"switch_to_register": "Don't have an account? Click here to register",
+		"switch_to_login": "Already have an account? Click here to login",
+		"forgot_password": "Forgot your password? Click here"
+	},
+	"email_verification": {
+		"modal_title": "### Verify your email",
+		"code_label": "Verification Code",
+		"code_placeholder": "Enter verification code",
+		"resend_button": "Request another email verification code",
+		"verify_button": "Verify",
+		"close_button": "Close"
+	},
+	"profile": {
+		"modal_title": "### 👤 User profile",
+		"resend_verification_button": "Request email verification code",
+		"generate_key_button": "Generate new API Key",
+		"logout_button": "Logout",
+		"close_button": "Close",
+		"okay_button": "Okay"
+	},
+	"password_reset": {
+		"modal_title": "### Reset your password",
+		"code_label": "Verification Code",
+		"code_placeholder": "Enter verification code",
+		"email_label": "Email",
+		"email_placeholder": "Enter email",
+		"password_label": "Password",
+		"password_confirm_label": "Confirm Password",
+		"resend_button": "Request another password reset code",
+		"verify_button": "Verify",
+		"close_button": "Close",
+		"request_modal_title": "### Forgot your password?",
+		"request_send_button": "Send password reset link",
+		"note_for_federated": "Note that password recovery is not available for federated users"
+	},
+	"tabs": {
+		"lemmatizer": "Lemmatizer",
+		"nerc": "Named Entity Recognition"
+	},
+	"nlp": {
+		"input_type_label": "Input Type",
+		"text_input_option": "Text Input",
+		"file_upload_option": "File Upload",
+		"text_input_label": "Input Text",
+		"text_input_placeholder": "Enter Basque text to analyze...",
+		"file_upload_label": "Upload Text File",
+		"analyze_button": "Analyze",
+		"analyze_text_button": "Analyze Text",
+		"analyze_file_button": "Analyze File",
+		"results_label": "Results: ...",
+		"output_format_label": "Output Format",
+		"output_format_web": "Web view",
+		"output_format_txt": "Text file (.txt)",
+		"output_format_json": "JSON file (.json)",
+		"download_button": "Download"
+	},
+	"lemmatizer": {
+		"title": "## 🔍 Lemmatizer",
+		"description": "Converts Basque words to their base form (lemma)"
+	},
+	"nerc": {
+		"title": "## 🔗 Named Entity Recognition",
+		"description": "Identify and classify named entities in Basque text"
+	},
+	"messages": {
+		"success": {
+			"welcome": "✅ Welcome!",
+			"registration_success": "✅ Registration successful! Please verify your email.",
+			"verification_sent": "✅ Verification code sent successfully.",
+			"email_verified": "✅ Email verified successfully!",
+			"password_reset_sent": "✅ Check your email for password reset instructions. If you don't see it, please check your spam folder.",
+			"password_reset": "✅ Your password has been reset successfully.",
+			"new_api_key": "### 🔑 Your new API Key",
+			"api_key_instructions": "⚠️ Important: Copy this key now — you won't be able to see it again!",
+			"user_updated": "✅ User updated successfully!",
+			"user_created": "✅ User created successfully!",
+			"user_deleted": "✅ User deleted successfully!",
+			"profile_updated": "✅ Profile updated successfully!",
+			"profile_created": "✅ Profile created successfully!",
+			"profile_deleted": "✅ Profile deleted successfully!"
+		},
+		"errors": {
+			"fill_all_fields": "❌ Please fill in all required fields",
+			"passwords_not_match": "❌ Passwords do not match",
+			"password_not_secure_100000": "❌ This password is extremely common and does not meet our security standards. Please choose a more secure password.",
+			"password_not_secure_1000": "❌ This password is very predictable and does not meet our security standards. For your security, choose a different one.",
+			"password_not_secure": "❌ This password does not meet our security standards. Please try a more unique combination.",
+			"password_too_short": "❌ Password must be at least 8 characters long",
+			"password_too_long": "❌ Password must be at most 64 characters long",
+			"username_too_short": "❌ Username must be at least 3 characters long",
+			"username_too_long": "❌ Username must be at most 64 characters long",
+			"username_or_email_taken": "Username or email already exists",
+			"registration_error": "❌ Registration error",
+			"registration_failed": "❌ Registration failed",
+			"too_many_attempts": "❌ Too many attempts. Please wait a few minutes before trying again.",
+			"invalid_credentials": "❌ Invalid username or password",
+			"enter_credentials": "❌ Please enter username and password",
+			"email_required": "❌ Please provide your email",
+			"account_disabled": "❌ Your account is disabled. Please contact support for assistance.",
+			"not_authenticated": "❌ Not authenticated",
+			"invalid_input": "❌ Invalid or too long",
+			"authentication_required": "❌ You must be logged in to perform this action",
+			"verification_failed": "❌ Invalid or expired verification code",
+			"verification_not_sent": "❌ Verification code could not be sent",
+			"file_not_found": "❌ Error: The uploaded file was not found.",
+			"api_call_failed": "❌ The operation could not be completed. This might be due to a network issue, server timeout, or file size and type limitations. Please check your connection and try again. If the problem persists, try with a smaller file.",
+			"api_error": "❌ Error",
+			"user_not_found": "❌ User not found",
+			"profile_not_found": "❌ Profile not found",
+			"update_failed": "❌ Failed to update",
+			"delete_failed": "❌ Failed to delete",
+			"create_failed": "❌ Failed to create",
+			"password_reset_failed": "❌ Failed to reset password",
+			"api_key_generation_failed": "❌ Could not generate API key"
+		},
+		"warnings": {
+			"enter_text_or_file": "⚠️ Please enter some text or upload a file.",
+			"txt_files_only": "⚠️ Only .txt files are supported.",
+			"invalid_input": "⚠️ Invalid or too long input. Login or create an account for higher text limits.",
+			"authentication_required": "⚠️ Authentication required. Please login to access this service.",
+			"file_too_large": "⚠️ File is too large. Please upload a smaller file.",
+			"unsupported_file_type": "⚠️ Unsupported file type. Please upload a .txt file.",
+			"rate_limit_guest": "⚠️ Rate limit exceeded. Please login for higher limits.",
+			"rate_limit_user": "⚠️ Rate limit exceeded. Please try again later.",
+			"request_timeout": "⚠️ Request timeout. Please try again later or use shorter input."
+		},
+		"formatting": {
+			"invalid_response": "❌ Invalid response format",
+			"no_api_key": "ℹ️ You haven't created any API Key yet",
+			"email_not_verified": "(NOT VERIFIED)",
+			"yes": "Yes",
+			"no": "No"
+		}
+	},
+	"profile_info": {
+		"username_label": "**Username:**",
+		"email_label": "**Email:**",
+		"api_key_label": "**API Key:**"
+	},
+	"admin": {
+		"login": {
+			"title": "Admin Login",
+			"username_label": "Username",
+			"password_label": "Password",
+			"login_button": "Login",
+			"logout_button": "Logout"
+		},
+		"user_management": {
+			"title": "User Management",
+			"search_placeholder": "Search by email...",
+			"user_type_label": "User Type",
+			"status_label": "Status",
+			"status_all": "All",
+			"status_active": "Active",
+			"status_pending": "Pending",
+			"status_disabled": "Disabled",
+			"add_user_button": "Add New User",
+			"edit_user_button": "Edit",
+			"delete_user_button": "Delete",
+			"save_changes_button": "Save Changes",
+			"cancel_button": "Cancel",
+			"refresh_button": "Refresh",
+			"confirm_delete_title": "Confirm Deletion",
+			"confirm_delete_message": "Are you sure you want to delete this user? This action cannot be undone.",
+			"confirm_button": "Confirm",
+			"federated_user_label": "Federated User",
+			"no_users_found": "No users found"
+		},
+		"profile_management": {
+			"title": "Profile Management",
+			"add_profile_button": "Add New Profile",
+			"edit_profile_button": "Edit Profile",
+			"save_profile_button": "Save Profile",
+			"delete_profile_button": "Delete Profile",
+			"profile_id": "ID",
+			"profile_name": "Name",
+			"count": "Count",
+			"time_window": "Time Window (seconds)",
+			"rejected_code": "Rejected Code",
+			"rejected_message": "Rejected Message",
+			"policy": "Policy",
+			"show_limit_header": "Show Limit Header",
+			"policy_choices": {
+				"local": "Local",
+				"redis": "Redis",
+				"cluster": "Cluster"
+			},
+			"confirm_delete_message": "Are you sure you want to delete this profile? This action cannot be undone.",
+			"no_profiles_found": "No profiles found"
+		},
+		"navigation": {
+			"users": "Users",
+			"profiles": "Profiles"
+		}
+	}
+}
