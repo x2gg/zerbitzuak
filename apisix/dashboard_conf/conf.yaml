@@ -15,8 +15,9 @@
 # limitations under the License.
 #
 
-conf:
-  
+conf:  
+  apisix:
+     admin_key: "${{APISIX_ADMIN_KEY}}"
   listen:
     host: 0.0.0.0     # `manager api` listening ip or host name
     port: 9000          # `manager api` listening port
@@ -42,12 +43,12 @@ authentication:
   expire_time: 3600     # jwt token expire time, in second
   users:
     - username: admin   # username and password for login `manager api`
-      password: DashAld0416    #Rwiq3a7dcXPdR9m7WZJhU
-    - username: user
-      password: user
-#apisix:
-#  admin_api: "http://127.0.0.1:9180/apisix/admin"
-#  admin_key: "edd1c9f034335f136f87ad84b625c8f1"
+      password: "${{DASHBOARD_ADMIN_PASSWORD}}"
+    #Rwiq3a7dcXPdR9m7WZJhU
+    #  password: "${{DASHBOARD_ADMIN_PASSWORD}}"    #Rwiq3a7dcXPdR9m7WZJhU
+    # - username: user
+    #   password: user
+
 plugin_attr:
   prometheus:
     export_addr:
@@ -63,11 +64,11 @@ plugin_attr:
 #     access_control-allow_methods: "*"
 #     x_frame_options: "allow-from *"
 security:
-  access_control_allow_origin: "https://dev.hitz.eus"  # Change this line
+  access_control_allow_origin: "https://zerbitzuak.hitz.eus"  # Change this line
   access_control_allow_credentials: true
   access_control_allow_headers: "Authorization"
   access_control_allow_methods: "*"
-  x_frame_options: "allow-from https://dev.hitz.eus"  # Also update this
+  x_frame_options: "allow-from https://zerbitzuak.hitz.eus"  # Also update this
     #content_security_policy:  "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src http://158.227.115.100:3000"  # You can set frame-src to provide content for your grafana panel.
     #content_security_policy: "frame-src *"
 

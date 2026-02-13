@@ -19,14 +19,15 @@
 
 services:
   apisix:
-    image: apache/apisix:${APISIX_IMAGE_TAG:-3.13.0-debian}
+    image: apache/apisix:${APISIX_IMAGE_TAG:-3.14.1-debian}
     restart: always
     container_name: gateway_apisix
     volumes:
       - ./apisix_conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
     depends_on:
       - etcd
-    ##network_mode: host
+    environment:
+      - APISIX_ADMIN_KEY=${APISIX_ADMIN_KEY}
     ports:
       - "9180:9180/tcp"
       - "9080:9080/tcp"
@@ -44,17 +45,31 @@ services:
 
   
   dashboard:
-    image: "apache/apisix-dashboard:3.0.0-alpine"
-    # image: apache/apisix-dashboard:3.0.0-centos
+    
+    image: apache/apisix-dashboard:3.0.0-centos
     restart: always
     container_name: gateway_dashboard
     environment:
-      - PUBLIC_URL=/zubi_kudeaketa/
+      - ENV_INST_ID=true
+      - PUBLIC_URL=/gw/
+      #- DASHBOARD_ADMIN_PASSWORD=${DASHBOARD_ADMIN_PASSWORD}
+      - APISIX_ADMIN_KEY=${APISIX_ADMIN_KEY}
+      - APISIX_DASHBOARD_AUTHENTICATION_USERS_0_PASSWORD=${DASHBOARD_ADMIN_PASSWORD}
+
     volumes:
-      - ./dashboard_conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml:ro
+      - ./dashboard_conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
       - ./dashboard_logs:/usr/local/apisix-dashboard/logs
+    # entrypoint: 
+    #   - /bin/sh
+    #   - -c
+    #   - |
+    #     sed -i "s/\$${{DASHBOARD_ADMIN_PASSWORD}}/$${DASHBOARD_ADMIN_PASSWORD}/g" /usr/local/apisix-dashboard/conf/conf.yaml
+    #     sed -i "s/\$${{APISIX_ADMIN_KEY}}/$${APISIX_ADMIN_KEY}/g" /usr/local/apisix-dashboard/conf/conf.yaml
+    #     /usr/local/apisix-dashboard/manager-api
+
     depends_on:
       - etcd
+    
     ports:
       - "9000:9000/tcp"
     networks:
