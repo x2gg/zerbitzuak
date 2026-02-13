@@ -6,10 +6,10 @@ services:
     container_name: db_mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: xxxx
       MYSQL_DATABASE: user_db
       MYSQL_USER: api_user
-      MYSQL_PASSWORD: securepassword
+      MYSQL_PASSWORD: xxxx
     networks:
       - backend_net
     volumes:
@@ -39,12 +39,12 @@ services:
       SMTP_HOST: smtp.ehu.eus
       SMTP_PORT: 587
       SMTP_USERNAME: clariaheus.hitz@ehu.eus
-      SMTP_PASSWORD: FTfgit70
+      SMTP_PASSWORD: xxxx
       SMTP_FROM_EMAIL: clariaheus.hitz@ehu.eus
       SMTP_FROM_NAME: Hitz - NLP
       APISIX_ADMIN_URL: http://apisix:9180/apisix/admin
       # APISIX_ADMIN_URL: https://zerbitzuak.hitz.eus/apisix/admin/
-      APISIX_ADMIN_KEY: edd1c9f034335f136f87ad84b625c8f1
+      APISIX_ADMIN_KEY: 
       #NLP_URL: http://lemma_eta_nerc:8010/api
       #NLP_URL: http://lematizatzailea:8010/api/
       NLP_URL: https://zerbitzuak.hitz.eus/lema/api
