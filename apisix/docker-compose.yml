@@ -52,21 +52,13 @@ services:
     environment:
       - ENV_INST_ID=true
       - PUBLIC_URL=/gw/
-      #- DASHBOARD_ADMIN_PASSWORD=${DASHBOARD_ADMIN_PASSWORD}
+      - DASHBOARD_ADMIN_PASSWORD=${DASHBOARD_ADMIN_PASSWORD}
       - APISIX_ADMIN_KEY=${APISIX_ADMIN_KEY}
-      - APISIX_DASHBOARD_AUTHENTICATION_USERS_0_PASSWORD=${DASHBOARD_ADMIN_PASSWORD}
 
     volumes:
       - ./dashboard_conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
       - ./dashboard_logs:/usr/local/apisix-dashboard/logs
-    # entrypoint: 
-    #   - /bin/sh
-    #   - -c
-    #   - |
-    #     sed -i "s/\$${{DASHBOARD_ADMIN_PASSWORD}}/$${DASHBOARD_ADMIN_PASSWORD}/g" /usr/local/apisix-dashboard/conf/conf.yaml
-    #     sed -i "s/\$${{APISIX_ADMIN_KEY}}/$${APISIX_ADMIN_KEY}/g" /usr/local/apisix-dashboard/conf/conf.yaml
-    #     /usr/local/apisix-dashboard/manager-api
-
+  
     depends_on:
       - etcd
     
