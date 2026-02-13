@@ -26,4 +26,6 @@ lemma-nerc-onnx/
 nlp_infe_cpu/
 proba/
 
+backups/
+
 
