@@ -6,10 +6,10 @@ services:
     container_name: db_mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: user_db
       MYSQL_USER: api_user
-      MYSQL_PASSWORD: securepassword
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     networks:
       - backend_net
     volumes:
@@ -18,7 +18,7 @@ services:
     ports:
       - "3306:3306"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -33,26 +33,23 @@ services:
     environment:
       DB_HOST: mysql
       DB_PORT: 3306
-      DB_USER: api_user
-      DB_PASSWORD: securepassword
-      DB_NAME: user_db
-      SMTP_HOST: smtp.ehu.eus
-      SMTP_PORT: 587
-      SMTP_USERNAME: clariaheus.hitz@ehu.eus
-      SMTP_PASSWORD: FTfgit70
-      SMTP_FROM_EMAIL: clariaheus.hitz@ehu.eus
-      SMTP_FROM_NAME: Hitz - NLP
-      APISIX_ADMIN_URL: http://apisix:9180/apisix/admin
-      # APISIX_ADMIN_URL: https://zerbitzuak.hitz.eus/apisix/admin/
-      APISIX_ADMIN_KEY: edd1c9f034335f136f87ad84b625c8f1
-      #NLP_URL: http://lemma_eta_nerc:8010/api
-      #NLP_URL: http://lematizatzailea:8010/api/
-      NLP_URL: https://zerbitzuak.hitz.eus/lema/api
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_FROM_EMAIL: ${SMTP_FROM_EMAIL}
+      SMTP_FROM_NAME: ${SMTP_FROM_NAME}
+      APISIX_ADMIN_URL: ${APISIX_ADMIN_URL}
+      APISIX_ADMIN_KEY: ${APISIX_ADMIN_KEY}
+      NLP_URL: ${NLP_URL}
 
-     # NLP_URL: http://fastapi-nlp:8300
-      WEB_BASE_URL: https://zerbitzuak.hitz.eus/nlp_tresnak/
+      WEB_BASE_URL: ${WEB_BASE_URL}
       CRUD_ADMIN: admin
       PYTHONPATH: /app
+
     networks:
       - backend_net
       - external_net
