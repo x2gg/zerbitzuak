@@ -7,3 +7,5 @@ mysql-connector-python==8.2.0
 requests==2.31.0
 pydantic[email]==2.5.0
 pydantic-settings==2.1.0
+openai>=1.0.0
+python-dotenv    # to read project settings from .env file
