@@ -1,8 +1,10 @@
 services:
   gradio_crud:
+    #image: gradio_crud-gradio_crud:snapshot
+    image: gradio_crud-gradio_crud:latest
     build:
-      context: .  # Path relative to docker-compose.yml
-      dockerfile: Dockerfile
+       context: .  # Path relative to docker-compose.yml
+       dockerfile: Dockerfile
     container_name: gradio_crud_ui
     restart: unless-stopped
     networks:
@@ -11,8 +13,8 @@ services:
     ports:
       - "7860:7860"
     environment:
-      - APISIX_URL=https://zerbitzuak.hitz.eus/api
-      - WEB_BASE_URL=https://zerbitzuak.hitz.eus/erab_kudeaketa/
+      - APISIX_URL=${APISIX_URL}
+      - WEB_BASE_URL=${WEB_BASE_URL}
       
 networks:
   # internal network
